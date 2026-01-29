@@ -40,13 +40,13 @@ Building this project transformed my understanding of how operating systems actu
 |---------|-------------|
 | `cd <path>` | Navigate the filesystem |
 | `pwd` | Where am I? |
-| `echo [-n] <text>` | Speak your truth (with `$VAR` expansion!) |
-| `env` | Peek at the environment |
-| `setenv VAR=value` | Shape your world |
-| `unsetenv VAR` | Let go of the past |
+| `echo [-n] <text>` | Displays text (with `$VAR` expansion!) |
+| `env` | Looks at the environment |
+| `setenv VAR=value` | Sets environment variable |
+| `unsetenv VAR` | Removes environment variable |
 | `which <cmd>` | Find executables hiding in your PATH |
-| `.help` | A friendly guide |
-| `exit` / `quit` | Graceful departure |
+| `.help` | Guide to commands |
+| `exit` / `quit` | Leaves terminal |
 
 **Plus:** Full external command execution via `fork()` + `execve()` — run `ls`, `cat`, `gcc`, anything in your PATH.
 
@@ -159,12 +159,9 @@ Building this shell taught me:
 
 ---
 
-## 📜 License
+##  License
 
 Do whatever you want with it!
 
 ---
-
-<p align="center">
-  <i>Built with curiosity and caffeine ☕</i>
-</p>
+>
