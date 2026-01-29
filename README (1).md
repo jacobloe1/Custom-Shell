@@ -1,24 +1,40 @@
-# 🐚 my_shell
+#  Custom Shell 
 
-> *A handcrafted Unix shell built from scratch in pure C — no shortcuts, no standard library string functions, just raw systems programming.*
+> *A Unix shell built from scratch in pure C — no shortcuts, no standard library string functions*
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║  [my_shell]> echo "Welcome to the rabbit hole"               ║
-║  Welcome to the rabbit hole                                  ║
+║  [my_shell]> echo "Welcome to the terminal"                  ║
+║  Welcome to the terminal                                     ║
 ║  [my_shell]> _                                               ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🧬 Philosophy
+##  Skills & Knowledge Gained
 
-Why use `strcmp()` when you can write your own? This shell is an exercise in **understanding Unix from the ground up** — every string comparison, every memory allocation, every fork and exec is intentional and educational.
+Building this project transformed my understanding of how operating systems actually work
+
+**C Programming**
+- Pointer arithmetic became second nature — manipulating strings character by character
+- Developed intuition for memory layout and manual allocation strategies
+- Learned to think about null terminators, buffer sizes, and boundary conditions constantly
+
+**Operating Systems Internals**
+- Finally understood what happens when you type a command and press Enter
+- Grasped the parent-child process relationship through hands-on `fork()` implementation
+- Discovered how the kernel distinguishes between built-in shell commands and external executables
+- Learned why PATH exists and how shells resolve command locations
+
+**Problem Decomposition**
+- Learned to break complex systems into modular, testable components
+- Each file has a single responsibility — parser parses, executor executes
+- Custom helper functions mirror libc, teaching what those functions actually do internally
 
 ---
 
-## ✨ Features
+##  Features
 
 | Command | Description |
 |---------|-------------|
@@ -36,7 +52,7 @@ Why use `strcmp()` when you can write your own? This shell is an exercise in **u
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -66,7 +82,7 @@ Why use `strcmp()` when you can write your own? This shell is an exercise in **u
 
 ---
 
-## 🔧 Reimplemented from Scratch
+##  Reimplemented from Scratch
 
 No `<string.h>` dependency for core operations:
 
@@ -84,7 +100,7 @@ my_getenv()    // Environment lookup
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```bash
 # Compile
@@ -105,7 +121,7 @@ Hello you
 
 ---
 
-## 📁 File Manifest
+##  File Manifest
 
 | File | Purpose |
 |------|---------|
@@ -118,9 +134,9 @@ Hello you
 
 ---
 
-## 🎯 Learning Outcomes
+##  Learning Outcomes
 
-Building this shell teaches:
+Building this shell taught me:
 
 - **Process control** — `fork()`, `execve()`, `waitpid()`
 - **File system navigation** — `chdir()`, `getcwd()`, `access()`
@@ -131,7 +147,7 @@ Building this shell teaches:
 
 ---
 
-## 🔮 Future Ideas
+##  Future Ideas
 
 - [ ] Piping (`cmd1 | cmd2`)
 - [ ] Redirection (`>`, `>>`, `<`)
@@ -145,7 +161,7 @@ Building this shell teaches:
 
 ## 📜 License
 
-Do whatever you want with it. Learn from it. Break it. Rebuild it better.
+Do whatever you want with it!
 
 ---
 
